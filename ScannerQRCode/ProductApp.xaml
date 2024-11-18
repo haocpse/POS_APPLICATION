@@ -1,0 +1,44 @@
+﻿<Window x:Class="ScannerQRCode.ProductApp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScannerQRCode"
+        mc:Ignorable="d"
+        Title="ProductApp" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Labels and Textboxes for Product Information -->
+        <TextBlock Text="Product Name:" Grid.Column="1" VerticalAlignment="Center" Margin="107,0,372,0"/>
+        <TextBox Name="txtProductName" Grid.Row="0" Grid.Column="1" Width="200" Margin="290,5,185,5"/>
+
+        <TextBlock Text="Product Price:" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="107,0,372,0"/>
+        <TextBox Name="txtProductPrice" Grid.Row="1" Grid.Column="1" Width="200" Margin="290,5,185,5"/>
+
+        <TextBlock Text="Product Quantity:" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="107,7,372,0"/>
+        <TextBox Name="txtProductQuantity" Grid.Row="2" Grid.Column="1" Width="200" Margin="290,5,185,5"/>
+
+        <!-- Button to Generate Barcode -->
+        <Button Name="btnGenerateBarcode" Content="Generate Barcode" Grid.Row="3" Grid.Column="1" 
+                Width="124" HorizontalAlignment="Center" Margin="0,10,0,5" Click="btnGenerateBarcode_Click"/>
+
+        <!-- Image to display Barcode -->
+        <TextBlock Text="Barcode Preview:" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="66,0,518,0"/>
+        <Image Name="imgBarcode" Grid.Row="4" Grid.Column="1" Width="200" Height="200" Margin="290,5,185,5"/>
+
+
+    </Grid>
+</Window>
